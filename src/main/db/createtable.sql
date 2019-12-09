@@ -1,23 +1,23 @@
 --liquibase formatted sql
---changeset sang:1
+--changeset sang:10
 
-CREATE TABLE Persons (
-	    PersonID int,
+CREATE TABLE Employee (
+	    EmployeeID int,
 	    LastName varchar(255),
 	    FirstName varchar(255),
 	    Address varchar(255),
 	    City varchar(255)
 );
 
---changeset sang:2
-insert into Persons values(1,"kannan","sangeetha","Adyar","chennai");
-insert into Persons values(2,"kannan","seetha","thiruvanmiyur","chennai");
+--changeset sang:11
+insert into Employee values(1,"kannan","sangeetha","Adyar","chennai");
+insert into Employee values(2,"kannan","seetha","thiruvanmiyur","chennai");
 
 
---changeset sang:3
+--changeset sang:12
 
-CREATE TABLE Student (
-	     StudentID int,
+CREATE TABLE Staff (
+	     StaffID int,
              Name varchar(255),
              Address varchar(255),
 	     department varchar(255),
