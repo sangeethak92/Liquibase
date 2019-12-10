@@ -12,10 +12,14 @@ insert into Staff values(2,"Peter","thiruvanmiyur","chemistry",75);
 
 insert into Employee values(3,"Ram","Anitha","Navallur","chennai");
 
-
+/*
 --changeset sang:15
 --preconditions onFail:HALT onError:HALT
 --precondition-sql-check expectedResult:1 SELECT COUNT(*) FROM Staff
 
 insert into Staff values(1,"jo","chrompet","biology",90);
 insert into Staff values(2,"karthik","central","chemistry",75);
+
+*/
+
+
