@@ -5,4 +5,5 @@
 					      <!-- <includeAll path="/home/sangeethak92/Gitcheckout/Liquibase/src/main/db/*.sql"/> -->
 					      <include file="./src/main/db/createtable.sql"/>
 					      <!-- <include file="./src/main/db/precondition.sql"/> -->
+					      <include file="./src/main/db/tablecreation.sql"/>
 					  </databaseChangeLog>
