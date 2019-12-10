@@ -6,5 +6,8 @@
 					      <include file="./src/main/db/createtable.sql"/>
 					      <!-- <include file="./src/main/db/precondition.sql"/> -->
 					      <include file="./src/main/db/tablecreation.sql"/>
-					      <tagDatabase tag="version_1.0"/>
+					       
+				             <changeSet id="11" author="sang">
+						     <tagDatabase tag="version_1.0"/>
+				             </changeSet>		     
 					  </databaseChangeLog>
