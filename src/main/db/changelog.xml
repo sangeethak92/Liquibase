@@ -4,5 +4,5 @@
 			                      xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 					      <!-- <includeAll path="/home/sangeethak92/Gitcheckout/Liquibase/src/main/db/*.sql"/> -->
 					      <include file="./src/main/db/createtable.sql"/>
-					      <include file="./src/main/db/precondition.sql"/>
+					      <!-- <include file="./src/main/db/precondition.sql"/> -->
 					  </databaseChangeLog>
