@@ -12,17 +12,17 @@ insert into Staff values(2,"Peter","thiruvanmiyur","chemistry",75);
 --validCheckSum: 8:098f6bcd4621d386cade4e832627s7p1
 --preconditions dbms type:oracle
 
-insert into Employee values(3,"Ram","Anitha","Navallur","chennai");
+--insert into Employee values(3,"Ram","Anitha","Navallur","chennai");
 
 
-/*
+
 --changeset sang:15
 --preconditions onFail:HALT onError:HALT
 --precondition-sql-check expectedResult:1 SELECT COUNT(*) FROM Staff
 
-insert into Staff values(1,"jo","chrompet","biology",90);
-insert into Staff values(2,"karthik","central","chemistry",75);
+--insert into Staff values(1,"jo","chrompet","biology",90);
+--insert into Staff values(2,"karthik","central","chemistry",75);
 
-*/
+
 
 
