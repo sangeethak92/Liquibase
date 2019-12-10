@@ -9,5 +9,18 @@
 					       
 				             <changeSet id="11" author="sang">
 						     <tagDatabase tag="version_1.0"/>
-				             </changeSet>		     
+					     </changeSet>
+			                        <changeSet id="20" author="sang">
+							<sql>
+
+                                                           CREATE TABLE Staff1 (
+							   StaffID int,
+			                                   Name varchar(255),
+							   Address varchar(255)
+	                          			    );
+							</sql>
+						</changeSet>		               
+
+			                           
+
 					  </databaseChangeLog>
