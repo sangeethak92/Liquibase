@@ -21,8 +21,7 @@
 							</sql>
 						</changeSet>		              
 						      <changeSet id="21" author="sang" runOnChange="true">
-							      <preConditions onError="CONTINUE"" onFail="CONTINUE"">
-								      
+							      <preConditions onError="WARN">
 									                  <dbms type="oracle" />
 											          </preConditions>
 												         <sql>

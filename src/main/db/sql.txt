@@ -1,0 +1,81 @@
+13:11:29.993 INFO  [liquibase.integration.commandline.Main]: Starting Liquibase at Tue, 10 Dec 2019 13:11:29 UTC (version 3.8.2 #26 built at Tue Nov 26 04:53:39 UTC 2019)
+13:11:31.093 INFO  [liquibase.integration.commandline.Main]: No Liquibase Pro license key supplied. Please set liquibaseProLicenseKey on command line or in liquibase.properties to use Liquibase Pro features.
+13:11:31.094 INFO  [liquibase.integration.commandline.Main]: Liquibase Community 3.8.2 by Datical
+13:11:32.315 INFO  [liquibase.executor.jvm.JdbcExecutor]: SELECT COUNT(*) FROM liquibase.DATABASECHANGELOGLOCK
+13:11:32.392 INFO  [liquibase.executor.jvm.JdbcExecutor]: SELECT COUNT(*) FROM liquibase.DATABASECHANGELOGLOCK
+13:11:32.453 INFO  [liquibase.executor.jvm.JdbcExecutor]: SELECT `LOCKED` FROM liquibase.DATABASECHANGELOGLOCK WHERE ID=1
+13:11:32.501 INFO  [liquibase.lockservice.StandardLockService]: Successfully acquired change log lock
+13:11:35.324 INFO  [liquibase.executor.jvm.JdbcExecutor]: SELECT MD5SUM FROM liquibase.DATABASECHANGELOG WHERE MD5SUM IS NOT NULL LIMIT 1
+13:11:35.329 INFO  [liquibase.executor.jvm.JdbcExecutor]: SELECT COUNT(*) FROM liquibase.DATABASECHANGELOG
+13:11:35.441 INFO  [liquibase.changelog.StandardChangeLogHistoryService]: Reading from liquibase.DATABASECHANGELOG
+13:11:35.444 INFO  [liquibase.executor.jvm.JdbcExecutor]: SELECT * FROM liquibase.DATABASECHANGELOG ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+13:11:35.488 INFO  [liquibase.executor.jvm.JdbcExecutor]: CREATE TABLE Employee (
+	    EmployeeID int,
+	    LastName varchar(255),
+	    FirstName varchar(255),
+	    Address varchar(255),
+	    City varchar(255)
+)
+13:11:35.524 ERROR [liquibase.changelog.ChangeSet]: Change Set ./createtable.sql::10::sang failed.  Error: Table 'Employee' already exists [Failed SQL: (1050) CREATE TABLE Employee (
+	    EmployeeID int,
+	    LastName varchar(255),
+	    FirstName varchar(255),
+	    Address varchar(255),
+	    City varchar(255)
+)]
+13:11:35.569 INFO  [liquibase.lockservice.StandardLockService]: Successfully released change log lock
+13:11:35.576 ERROR [liquibase.integration.commandline.Main]: Unexpected error running Liquibase: Table 'Employee' already exists [Failed SQL: (1050) CREATE TABLE Employee (
+	    EmployeeID int,
+	    LastName varchar(255),
+	    FirstName varchar(255),
+	    Address varchar(255),
+	    City varchar(255)
+)]
+liquibase.exception.MigrationFailedException: Migration failed for change set ./createtable.sql::10::sang:
+     Reason: liquibase.exception.DatabaseException: Table 'Employee' already exists [Failed SQL: (1050) CREATE TABLE Employee (
+	    EmployeeID int,
+	    LastName varchar(255),
+	    FirstName varchar(255),
+	    Address varchar(255),
+	    City varchar(255)
+)]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:646)
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:53)
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:83)
+	at liquibase.Liquibase.update(Liquibase.java:202)
+	at liquibase.Liquibase.update(Liquibase.java:179)
+	at liquibase.integration.commandline.Main.doMigration(Main.java:1399)
+	at liquibase.integration.commandline.Main.run(Main.java:229)
+	at liquibase.integration.commandline.Main.main(Main.java:143)
+Caused by: liquibase.exception.DatabaseException: Table 'Employee' already exists [Failed SQL: (1050) CREATE TABLE Employee (
+	    EmployeeID int,
+	    LastName varchar(255),
+	    FirstName varchar(255),
+	    Address varchar(255),
+	    City varchar(255)
+)]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:402)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:59)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:131)
+	at liquibase.database.AbstractJdbcDatabase.execute(AbstractJdbcDatabase.java:1274)
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1256)
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:609)
+	... 7 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'Employee' already exists
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3933)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3869)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2524)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2675)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2465)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2439)
+	at com.mysql.jdbc.StatementImpl.executeInternal(StatementImpl.java:829)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:729)
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:398)
+	... 12 common frames omitted

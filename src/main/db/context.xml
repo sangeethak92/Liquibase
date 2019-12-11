@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+	  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	      xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+	               http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+		           
+
+		           <changeSet id="22" author="bob" context="EPT" runOnChange="true">
+				        <sql>
+						     CREATE TABLE Employee124 (
+						                 EmployeeID int,
+								             LastName varchar(255),
+									                 FirstName varchar(255),
+											             Address varchar(255),
+												                 City varchar(255)
+														       );
+														            </sql>
+															      </changeSet>
+
+															      <changeSet id="23" author="bob" context="PAT">
+																      <sql>
+																	      insert into Employee12 values(1,"kannan","sangeetha","Adyar","chennai");
+																	      insert into Employee12 values(2,"kannan","seetha","thiruvanmiyur","chennai");
+																      </sql>
+																             
+																          </changeSet>
+
+																	  <changeSet id="24" author="bob" context="UAT">
+																		       <sql>
+																			            CREATE TABLE Employee123 (
+																				                EmployeeID int,
+																						            LastName varchar(255),
+																							                FirstName varchar(255),
+																									            Address varchar(255),
+																										                City varchar(255)
+																												      );
+																												           </sql>
+																													     </changeSet>
+
+																													     <changeSet id="25" author="bob" context="PROD">
+																														     <sql>
+																															     insert into Employee123 values(1,"kannan","sangeetha","Adyar","chennai");
+																															     insert into Employee123 values(2,"kannan","seetha","thiruvanmiyur","chennai");
+																														     </sql>
+																														            
+																														         </changeSet>
+																														 </databaseChangeLog>
