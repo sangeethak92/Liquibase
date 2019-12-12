@@ -9,7 +9,7 @@
 
 	<include file="./src/main/db/createtable.sql"/>
 
-	<include file="./src/main/db/trigger.xml"/>
+       <!--	<include file="./src/main/db/trigger.xml"/> -->
 
 	<changeSet id="20" author="sang">
 		<sql>
