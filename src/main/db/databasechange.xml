@@ -15,8 +15,16 @@
 				     Address varchar(255)
 				      );
 				          </sql>
-         </changeSet>
-                                            
+       
+		<rollback>
+                   <dropTable tableName="Staff1"/>
+	         </rollback>
+
+        </changeSet>
+
+	<changeSet author="sang" id="101">
+    <tagDatabase tag="1.0"/>
+    </changeSet>    
 					      
 
 </databaseChangeLog>

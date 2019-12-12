@@ -1,0 +1,179 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.8.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet author="sangeethak92 (generated)" id="1576042941096-1">
+        <createTable tableName="Employee">
+            <column name="EmployeeID" type="INT"/>
+            <column name="LastName" type="VARCHAR(255)"/>
+            <column name="FirstName" type="VARCHAR(255)"/>
+            <column name="Address" type="VARCHAR(255)"/>
+            <column name="City" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="sangeethak92 (generated)" id="1576042941096-2">
+        <createTable tableName="Employee12">
+            <column name="EmployeeID" type="INT"/>
+            <column name="LastName" type="VARCHAR(255)"/>
+            <column name="FirstName" type="VARCHAR(255)"/>
+            <column name="Address" type="VARCHAR(255)"/>
+            <column name="City" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="sangeethak92 (generated)" id="1576042941096-3">
+        <createTable tableName="Employee123">
+            <column name="EmployeeID" type="INT"/>
+            <column name="LastName" type="VARCHAR(255)"/>
+            <column name="FirstName" type="VARCHAR(255)"/>
+            <column name="Address" type="VARCHAR(255)"/>
+            <column name="City" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="sangeethak92 (generated)" id="1576042941096-4">
+        <createTable tableName="Employee124">
+            <column name="EmployeeID" type="INT"/>
+            <column name="LastName" type="VARCHAR(255)"/>
+            <column name="FirstName" type="VARCHAR(255)"/>
+            <column name="Address" type="VARCHAR(255)"/>
+            <column name="City" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="sangeethak92 (generated)" id="1576042941096-5">
+        <createTable tableName="Employee_detail">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="employeeNumber" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="lastname" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="firstname" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="sangeethak92 (generated)" id="1576042941096-6">
+        <createTable tableName="Persons">
+            <column name="PersonID" type="INT"/>
+            <column name="LastName" type="VARCHAR(255)"/>
+            <column name="FirstName" type="VARCHAR(255)"/>
+            <column name="Address" type="VARCHAR(255)"/>
+            <column name="City" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="sangeethak92 (generated)" id="1576042941096-7">
+        <createTable tableName="employees_audit">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="employeeNumber" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="lastname" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="changedat" type="datetime"/>
+            <column name="action" type="VARCHAR(50)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="sangeethak92 (generated)" id="1576042941096-8">
+        <createTable tableName="members">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(255)"/>
+            <column name="birthDate" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="sangeethak92 (generated)" id="1576042941096-9">
+        <createTable tableName="members1">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(255)"/>
+            <column name="birthDate" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="sangeethak92 (generated)" id="1576042941096-10">
+        <createTable tableName="members3">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(255)"/>
+            <column name="birthDate" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="sangeethak92 (generated)" id="1576042941096-11">
+        <createTable tableName="members4">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(255)"/>
+            <column name="birthDate" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="sangeethak92 (generated)" id="1576042941096-12">
+        <createTable tableName="reminders">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="memberId" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="message" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="sangeethak92 (generated)" id="1576042941096-13">
+        <createTable tableName="reminders1">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="memberId" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="message" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="sangeethak92 (generated)" id="1576042941096-14">
+        <createTable tableName="reminders3">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="memberId" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="message" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="sangeethak92 (generated)" id="1576042941096-15">
+        <createTable tableName="reminders4">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="memberId" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="message" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
