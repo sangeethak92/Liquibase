@@ -24,7 +24,7 @@
 		<connection>scm:git:https://github.com/sangeethak92/Liquibase.git</connection>
 		<developerConnection>scm:git:https://github.com/sangeethak92/Liquibase.git</developerConnection>
 	        <url>https://github.com/sangeethak92/Liquibase.git</url>
-         <tag>Spring-</tag>
+         
   </scm>
 
 
