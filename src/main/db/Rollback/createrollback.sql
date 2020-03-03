@@ -24,10 +24,13 @@ SET autocommit=0;
 
 CREATE TABLE users100(id INT NOT NULL, name varchar(255));
 
-CREATE TABLE (id INT NOT NULL, name varchar(255));
+CREATE TABLE users101(id INT NOT NULL, name varchar(255));
 
 CREATE TABLE users102(id INT NOT NULL, name varchar(255));
 
+--rollback drop table users100;
+--rollback drop table users101;
+--rollback drop table users102;
 
 
 

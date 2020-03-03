@@ -30,5 +30,10 @@
     <tagDatabase tag="1.0"/>
     </changeSet>    
 					      
+           <include file="./src/main/db/Rollback/createrollback.sql"/>
+
+       <changeSet author="sang" id="102">
+    <tagDatabase tag="2.0"/>
+    </changeSet>
 
 </databaseChangeLog>
