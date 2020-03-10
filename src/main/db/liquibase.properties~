@@ -1,6 +1,0 @@
-driver: com.mysql.jdbc.Driver
-classpath: /opt/mysql-connector-java-5.1.48/mysql-connector-java-5.1.48-bin.jar
-url: jdbc:mysql://localhost/Liquibase?useUnicode=true&characterEncoding=UTF-8
-username: root
-password: root
-
